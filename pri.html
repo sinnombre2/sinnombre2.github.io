@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE AMO❤️ COMO NO TIENES IDEA...MARCO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+        <audio controls autoplay>
+            <source src="musicas/simedicesquesi.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        REPRODUCEME
+        
+    <div class="game">
+        <div class="controls">
+            <button>INICIAR</button>
+            <div class="stats">
+                <div class="moves">0 movimientos</div>
+                <div class="timer">Tiempo: 0 seg</div>
+            </div>
+        </div>
+        <div class="board-container">
+            <div class="board" data-dimension="4"></div>
+            <div class="win">GANASTE!</div>
+            
+        </div>
+    </div>
+    <script>
+        function iniciarReproduccion() {
+            var audio = document.getElementById("miAudio");
+            audio.play();
+            document.body.removeEventListener("click", iniciarReproduccion);
+        }
+    </script>
+</body>
+</html>

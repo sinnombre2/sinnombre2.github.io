@@ -17,6 +17,13 @@
             <button class="boton-llamativo">Iniciar</button>
         </a>
     </center>
+    <script>
+        function iniciarReproduccion() {
+            var audio = document.getElementById("miAudio");
+            audio.play();
+            document.body.removeEventListener("click", iniciarReproduccion);
+        }
+    </script>
 </body>
 </html>
 

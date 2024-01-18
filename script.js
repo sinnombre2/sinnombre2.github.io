@@ -119,7 +119,7 @@ const flipCard = card => {
             selectors.win.innerHTML = `
                 <span class="win-text">
                     GANASTE!!😁😊<br />
-                    SOLO QUERIA RECORDARTE QUE TE AMO❤️Y MUCHO...<br />
+                    SOLO QUERIA RECORDARTE QUE TE QUIERO❤️Y MUCHO...<br />
                     <span class="highlight">${state.totalFlips}</span> movimientos<br />
                     <span class="highlight">${state.totalTime}</span> segundos
                     <br />

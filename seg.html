@@ -1,66 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeAmoInfinitamente</title>
-    <link rel="stylesheet" href="estilo.css">
+body {
+    background-color: #1660cf;
+}
 
-</head>
-<body>
-    <center>
-    <audio controls autoplay>
-        <source src="musicas/duele.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-    REPRODUCEME
-    </center>
-    <h1>EMOCIONES</h1>
-    <div class="cuadro-blanco">
-        <!-- Contenido dentro del cuadro blanco -->
-        <h3>BUENO BUENOO AQUI UN POCO DE LO QUE QUISE DECIR CON CADA EMOCION.</h3>
-        <p>😂   -jajaj por tus pendejadas </p>
-        <p>🥰   -nose el como pero me enamoraste(espero que no haya sido amarre jaj😂)</p>
-        <p>❤️   -te amo... infinitamente</p>
-        <p>😏   -pervertodo jaj</p>
-        <p>😇   -se que en el fondoo tienes un lado inocente </p>
-        <p>👻   -jajajaj tu y tus locuras te hacen unico</p>
-        <p>🔥   -😏 ya tu sabes jajaj los momentos calenturientos 🌚</p>
-        <p>😍   -cosita preciosa aww </p>
-        <p>😘   -uffff esa boquita que da ganas de robarle un beso jej</p>
-        <p>Ⓜ️   -M la letra que pasa todo el dia en mi mente</p>
-        <p>como te dije en un principio ...no se expresar muy bien mis sentiminetos.. no soy romantica 
-            pero contigo quisera serlo... se que nos separamos un tiempo aproximadamente 3 meses creo...
-            pero quien diria sigo sintiendo cosas por ti y por mas que trate de olvidarte no puede...
-            oye.. enserio no me hiciste amarre jajaj como te comente anteriormente es la segunda vez que me enamoro
-            de esta manera...creeme trate de alejarme pero no puedo y tampoco ya quiero...a menos que tu quieras...
-            <br>no crei volver a sentir esto.. llamado amor.. rayoss es bonito y a la vez feo <br>
-            bonito por que sabes que alguien te ama tal como eres.. y feo por que uno no sabe si sera para siempre 
-            o solo durara poco..pero por eso es bueno disfrutar cada minuto y cada segundo mientras haya amor...
-            <br>
-            que si estoy enamorada... nose che jajaj.. hice una pagina para demostrarte que si... en fin.
-            asi recuerdas que no sabias en que consistia mi carrera pues esta es una parte...diseño de paginas web..
-            <br>Y NO OLVIDES QUE TE AMO❤️
-        </p><br>
+.cuadro-blanco {
+    max-width: 80%;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 5%;
+}
 
-    </div>
-    <center>
-    <div id="video">
-        <div id="video">
-            <iframe width="860" height="515" src="https://www.youtube.com/embed/iBppJx1JpD0?si=0BxkR_PmkYPwVZLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
-        </div>
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        <div id="texto_vimeo">
-            
-        </div>
-    </div>
-</center>
-    <script>
-        function iniciarReproduccion() {
-            var audio = document.getElementById("miAudio");
-            audio.play();
-            document.body.removeEventListener("click", iniciarReproduccion);
-        }
-    </script>
-</body>
-</html>
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#video {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+    .cuadro-blanco {
+        margin: 2%;
+    }
+}

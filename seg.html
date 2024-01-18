@@ -1,24 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeAmoInfinitamente</title>
-    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+        #cuadro-blanco {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #youtube-video {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Proporción 16:9 para mantener la relación de aspecto */
+            position: relative;
+        }
+
+        #youtube-video iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
     <center>
-    <audio controls autoplay>
-        <source src="musicas/duele.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-    REPRODUCEME
-    </center>
-    <h1>EMOCIONES</h1>
-    <div class="cuadro-blanco">
-        <!-- Contenido dentro del cuadro blanco -->
-        <h3>BUENO BUENOO AQUI UN POCO DE LO QUE QUISE DECIR CON CADA EMOCION.</h3>
+        <audio controls autoplay>
+            <source src="musicas/duele.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        REPRODUCEME
+        </center>
+        <h1>EMOCIONES</h1>
+    <div class="container">
+        <div id="cuadro-blanco">
+            <!-- Contenido del cuadro blanco -->
+            <h3>BUENO BUENOO AQUI UN POCO DE LO QUE QUISE DECIR CON CADA EMOCION.</h3>
         <p>😂   -jajaj por tus pendejadas </p>
         <p>🥰   -nose el como pero me enamoraste(espero que no haya sido amarre jaj😂)</p>
         <p>❤️   -te amo... infinitamente</p>
@@ -42,19 +92,14 @@
             asi recuerdas que no sabias en que consistia mi carrera pues esta es una parte...diseño de paginas web..
             <br>Y NO OLVIDES QUE TE AMO❤️
         </p><br>
-
-    </div>
-    <center>
-    <div id="video">
-        <div id="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/iBppJx1JpD0?si=0BxkR_PmkYPwVZLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
         </div>
 
-        <div id="texto_vimeo">
-            
+        <div id="youtube-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iBppJx1JpD0?si=0BxkR_PmkYPwVZLM" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>    
         </div>
     </div>
-</center>
     <script>
         function iniciarReproduccion() {
             var audio = document.getElementById("miAudio");
@@ -64,3 +109,4 @@
     </script>
 </body>
 </html>
+

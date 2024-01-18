@@ -1,41 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Responsive con Bootstrap</title>
-
-    <!-- Enlace al CDN de Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>TE AMO❤️ COMO NO TIENES IDEA...MARCO</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <style>
+        /* Estilos comunes para todos los dispositivos */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos específicos para dispositivos más grandes (computadoras) */
+        @media screen and (min-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+            }
+
+            /* Otros estilos específicos para computadoras aquí */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Mi Página Responsive</h1>
-    </header>
-    <main>
-        <div class="game">
-            <div class="controls">
-                <button>Start</button>
-                <div class="stats">
-                    <div class="moves">0 moves</div>
-                    <div class="timer">Time: 0 sec</div>
-                </div>
-            </div>
-            <div class="board-container">
-                <div class="board" data-dimension="4"></div>
-                <div class="win">You won!</div>
-            </div>
-        </div>      
-    </main>
+    <script>
+        // Detectar el ancho de la ventana al cargar la página
+        window.addEventListener('load', function () {
+            adaptarAlDispositivo();
+        });
 
-    <!-- Pie de página -->
-    <footer>
-        &copy; 2024 Mi Página. Todos los derechos reservados.
-    </footer>
+        // Detectar cambios en el tamaño de la ventana y ajustar en consecuencia
+        window.addEventListener('resize', function () {
+            adaptarAlDispositivo();
+        });
 
-    <!-- Enlace al CDN de Bootstrap JS y Popper.js (necesarios para algunas funcionalidades de Bootstrap) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        // Función para adaptar al dispositivo
+        function adaptarAlDispositivo() {
+            var anchoVentana = window.innerWidth;
+
+            if (anchoVentana >= 768) {
+                // Estás en un dispositivo más grande (computadora)
+                // Puedes realizar cambios en el DOM o aplicar estilos específicos aquí
+            } else {
+                // Estás en un dispositivo más pequeño (móvil o tablet)
+                // Puedes realizar otros cambios o estilos específicos aquí
+            }
+        }
+    </script>
+        <audio controls autoplay>
+            <source src="musicas/simedicesquesi.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        REPRODUCEME
+        
+    <div class="game">
+        <div class="controls">
+            <button>INICIAR</button>
+            <div class="stats">
+                <div class="moves">0 movimientos</div>
+                <div class="timer">Tiempo: 0 seg</div>
+            </div>
+        </div>
+        <div class="board-container">
+            <div class="board" data-dimension="4"></div>
+            <div class="win">GANASTE!</div>
+            
+        </div>
+    </div>
+    <script>
+        function iniciarReproduccion() {
+            var audio = document.getElementById("miAudio");
+            audio.play();
+            document.body.removeEventListener("click", iniciarReproduccion);
+        }
+    </script>
 </body>
 </html>
+

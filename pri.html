@@ -8,48 +8,27 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <style>
-        /* Estilos comunes para todos los dispositivos */
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #c5ee9f;
         }
 
-        /* Estilos específicos para dispositivos más grandes (computadoras) */
-        @media screen and (min-width: 768px) {
-            body {
-                background-color: #f0f0f0;
-            }
-
-            /* Otros estilos específicos para computadoras aquí */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <script>
-        // Detectar el ancho de la ventana al cargar la página
-        window.addEventListener('load', function () {
-            adaptarAlDispositivo();
-        });
-
-        // Detectar cambios en el tamaño de la ventana y ajustar en consecuencia
-        window.addEventListener('resize', function () {
-            adaptarAlDispositivo();
-        });
-
-        // Función para adaptar al dispositivo
-        function adaptarAlDispositivo() {
-            var anchoVentana = window.innerWidth;
-
-            if (anchoVentana >= 768) {
-                // Estás en un dispositivo más grande (computadora)
-                // Puedes realizar cambios en el DOM o aplicar estilos específicos aquí
-            } else {
-                // Estás en un dispositivo más pequeño (móvil o tablet)
-                // Puedes realizar otros cambios o estilos específicos aquí
-            }
-        }
-    </script>
+    
     <center>
         <audio controls autoplay>
             <source src="musicas/simedicesquesi.mp3" type="audio/mp3">
@@ -58,8 +37,8 @@
         REPRODUCIR
     </center>
         
-        
-    <div class="game">
+    <div class="container">   
+        <div class="game">
         <div class="controls">
             <button>INICIAR</button>
             <div class="stats">
@@ -72,7 +51,14 @@
             <div class="win">GANASTE!</div>
             
         </div>
+        </div>
     </div>
+    <script>
+        function iniciarReproduccion() {
+            var audio = document.getElementById("miAudio");
+            audio.play();
+            document.body.removeEventListener("click", iniciarReproduccion);
+        }
+    </script>
 </body>
 </html>
-

@@ -7,9 +7,49 @@
     <title>TE AMO❤️ COMO NO TIENES IDEA...MARCO</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <style>
+        /* Estilos comunes para todos los dispositivos */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos específicos para dispositivos más grandes (computadoras) */
+        @media screen and (min-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+            }
+
+            /* Otros estilos específicos para computadoras aquí */
+        }
+    </style>
 </head>
 <body>
-    
+    <script>
+        // Detectar el ancho de la ventana al cargar la página
+        window.addEventListener('load', function () {
+            adaptarAlDispositivo();
+        });
+
+        // Detectar cambios en el tamaño de la ventana y ajustar en consecuencia
+        window.addEventListener('resize', function () {
+            adaptarAlDispositivo();
+        });
+
+        // Función para adaptar al dispositivo
+        function adaptarAlDispositivo() {
+            var anchoVentana = window.innerWidth;
+
+            if (anchoVentana >= 768) {
+                // Estás en un dispositivo más grande (computadora)
+                // Puedes realizar cambios en el DOM o aplicar estilos específicos aquí
+            } else {
+                // Estás en un dispositivo más pequeño (móvil o tablet)
+                // Puedes realizar otros cambios o estilos específicos aquí
+            }
+        }
+    </script>
         <audio controls autoplay>
             <source src="musicas/simedicesquesi.mp3" type="audio/mp3">
             Tu navegador no soporta el elemento de audio.
@@ -39,3 +79,4 @@
     </script>
 </body>
 </html>
+

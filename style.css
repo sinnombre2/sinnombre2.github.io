@@ -1,17 +1,16 @@
-/* Base styles for all screen sizes */
 html {
     width: 100%;
     height: 100%;
-    background: linear-gradient(325deg, #03001e 0%, #036bc0 30%, #38ecdd 70%, #91f8ff 100%);
+    background: #91f8ff;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     background-position: center;
+    
 }
-
 .game {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 150px;
     transform: translate(-50%, -50%);
 }
 
@@ -21,7 +20,6 @@ html {
     margin-bottom: 20px;
     margin-top: 100px;
 }
-
 button {
     background: #282A3A;
     color: #FFF;
@@ -33,58 +31,85 @@ button {
     font-size: 18pt;
     font-weight: bold;
 }
-
 .disabled {
     color: #757575;
 }
-
 .stats {
     color: #FFF;
     font-size: 14pt;
     font-weight: bold;
 }
-
 .board-container {
     position: relative;
 }
-
 .board,
 .win {
     border-radius: 5px;
     box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
-    background: linear-gradient(135deg, #03001e 0%, #036bc0 0%, #38ecdd 50%, #91f8ff 100%);
-    transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    background: linear-gradient(135deg,  #03001e 0%,#036bc0 0%,#38ecdd 50%, #91f8ff 100%);
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;
 }
-
 .board {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid columns */
+    grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
 }
-
+.board-container.flipped .board {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+.board-container.flipped .win {
+    transform: rotateY(0) rotateZ(0);
+}
 .card {
     position: relative;
-    width: 100%;
-    padding-bottom: 100%; /* Maintain aspect ratio for square cards */
+    width: 100px;
+    height: 100px;
     cursor: pointer;
 }
-
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-    .controls {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    button {
-        margin-top: 20px;
-    }
-
-    .board {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    }
+.card-front,
+.card-back {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background: #282A3A;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
 }
-
-/* Add more media queries as needed for other screen sizes */
+.card-back {
+    transform: rotateY(180deg) rotateZ(50deg);
+    font-size: 28pt;
+    user-select: none;
+    text-align: center;
+    line-height: 100px;
+    background: #FDF8E6;
+}
+.card.flipped .card-front {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+.card.flipped .card-back {
+    transform: rotateY(0) rotateZ(0);
+}
+.win {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #FDF8E6;
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+.win-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21pt;
+    color: #282A3A;
+}
+.highlight {
+    color: #7303c0;
+}
